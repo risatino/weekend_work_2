@@ -14,6 +14,9 @@
 # if a Superhero is attacked and their hitpoints are less than 1, they are no longer alive
 # Superhero needs a grab_tool method, that sets the has_special_tool attribute to true.
 
+class Superhero
+
+end
 
 # Driver code - don't touch anything below this line.
 puts "TESTING the Superhero class..."
