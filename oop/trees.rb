@@ -9,10 +9,14 @@ class Tree
     
   end
 
+  def rings
+    
+  end
+
   def winter_season
     
   end
-  
+
   def bear_fruit?
     
   end
