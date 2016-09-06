@@ -5,21 +5,21 @@
 # Hint: remember that with object oriented programming the object holds values in the attributes to describe it's current state. Even when we aren't reading it's attributes, they should be up to date.
 
 class Tree
-  def intialize(rings, winter_season)
-    
-  end
 
   def rings
-    
-  end
-
-  def winter_season
-    
+    @rings = 0
   end
 
   def bear_fruit?
-    
+    if @result < 7 == false
+    elsif @result >15 == false
   end
+  end
+
+  def winter_season
+    @winter_season = @rings + 1
+  end
+
 end
 
 # Driver code - don't touch anything below this line.
