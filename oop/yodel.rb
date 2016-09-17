@@ -17,7 +17,7 @@ class Yodel
   end
 
   def articulate
-    @articulate = segment * count
+    segment * count
   end
 end
 

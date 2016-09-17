@@ -16,7 +16,7 @@
 
 class Superhero
 attr_reader :name, :hitpoints
-attr_writer :hitpoints, :alive
+attr_writer :hitpoints, :alive, :has_special_tool
 
   def initialize(input_hash)
     @name = input_hash[:name]
@@ -31,17 +31,18 @@ attr_writer :hitpoints, :alive
     @alive = true
   end
 
-  def hit
+# class Superhero
+#   attr_reader :name
+#   attr_writer :hitpoints, :alive, :has_special_tool
 
-  end
-
-  def has_special_tool
-    
-  end
-  
-  def grab_tool
-
-  end
+#   def initialize(input)
+#     @name = input[:name]
+#     @hitpoints = input[:hitpoints]
+#     @attack = input[:attack]
+#     @alive = true
+#     @has_special_tool = false
+#   end
+# end
 
 end
 
