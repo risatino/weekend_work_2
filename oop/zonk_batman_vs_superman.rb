@@ -15,35 +15,31 @@
 # Superhero needs a grab_tool method, that sets the has_special_tool attribute to true.
 
 class Superhero
-attr_reader :name, :hitpoints
-attr_writer :hitpoints, :alive, :has_special_tool
-
-  def initialize(input_hash)
-    @name = input_hash[:name]
-    @hitpoints = input_hash[:hitpoints]
-    @attack = input_hash[:attack]
-    @alive = input_hash[:alive]
-    @has_special_tool = input_hash[:has_special_tool]
-    
-  end
-
-  def alive
+  attr_reader :name 
+  attr_accessor :hitpoints, :attack, :alive, :has_special_tool
+  def initialize(input)
+    @name = input[:name]
+    @hitpoints = input[:hitpoints]
+    @attack = input[:attack]
     @alive = true
+    @has_special_tool = false
   end
 
-# class Superhero
-#   attr_reader :name
-#   attr_writer :hitpoints, :alive, :has_special_tool
+  def hit(target)
+    target.hitpoints -= @attack
+  end
 
-#   def initialize(input)
-#     @name = input[:name]
-#     @hitpoints = input[:hitpoints]
-#     @attack = input[:attack]
-#     @alive = true
-#     @has_special_tool = false
-#   end
-# end
+  def grab_tool
+    @has_special_tool = true
+    @attack = @attack * 3
+  end
 
+  def hitpoints
+    if @hitpoints < 0 
+      @alive = false
+    end
+    @hitpoints
+  end
 end
 
 # Driver code - don't touch anything below this line.
